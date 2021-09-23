@@ -336,7 +336,7 @@ def evaluate(expression, state):
         case _:
           raise InterpTypeError(f"Cannot perform while loop with non-boolean operand")
         
-      return (new_value, new_value_type, new_state)
+      return (False, Boolean(), new_state)
 
     case _:
       raise InterpSyntaxError("Unhandled!")
